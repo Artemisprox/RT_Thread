@@ -1,2 +1,2 @@
-# RT-Thread
- works for lessons
+# RT_Thread
+ works
