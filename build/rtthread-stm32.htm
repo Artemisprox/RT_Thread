@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\build\rtthread-stm32.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\build\rtthread-stm32.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sun May 08 16:07:37 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sun May 08 18:20:09 2022
 <BR><P>
 <H3>Maximum Stack Usage =        496 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -198,8 +198,8 @@ Function Pointers
  <LI><a href="#[6e]">thread3_entry</a> from priority_inversion.o(.text) referenced from priority_inversion.o(.text)
  <LI><a href="#[63]">thread_entry</a> from idlehook_sample.o(.text) referenced 5 times from idlehook_sample.o(.text)
  <LI><a href="#[b4]">thread_sample</a> from thread_sample.o(.text) referenced from thread_sample.o(FSymTab)
- <LI><a href="#[76]">timeout1</a> from timer_sample.o(.text) referenced from timer_sample.o(.text)
- <LI><a href="#[77]">timeout2</a> from timer_sample.o(.text) referenced from timer_sample.o(.text)
+ <LI><a href="#[76]">timer1out</a> from timer_sample.o(.text) referenced from timer_sample.o(.text)
+ <LI><a href="#[77]">timer2out</a> from timer_sample.o(.text) referenced from timer_sample.o(.text)
  <LI><a href="#[b5]">timer_sample</a> from timer_sample.o(.text) referenced from timer_sample.o(FSymTab)
  <LI><a href="#[b6]">timeslice_sample</a> from timeslice_sample.o(.text) referenced from timeslice_sample.o(FSymTab)
  <LI><a href="#[97]">version</a> from cmd.o(.text) referenced 2 times from cmd.o(FSymTab)
@@ -2076,8 +2076,8 @@ Global Symbols
 <LI><a href="#[13a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_device_init
 <LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_show_version
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;thread_entry
-<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timeout2
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timeout1
+<LI><a href="#[77]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer2out
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer1out
 <LI><a href="#[75]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;thread2_entry
 <LI><a href="#[74]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;thread1_entry
 <LI><a href="#[205]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;thread1_signal_handler
@@ -3043,7 +3043,7 @@ Global Symbols
 </UL>
 <BR>[Called By]<UL><LI><a href="#[14c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_thread_suspend
 <LI><a href="#[14f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_thread_resume
-<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timeout1
+<LI><a href="#[76]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timer1out
 </UL>
 
 <P><STRONG><a name="[158]"></a>rt_timer_control</STRONG> (Thumb, 98 bytes, Stack size 16 bytes, timer.o(.text))
@@ -5235,16 +5235,16 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> thread_sample.o(.text)
 </UL>
-<P><STRONG><a name="[76]"></a>timeout1</STRONG> (Thumb, 46 bytes, Stack size 8 bytes, timer_sample.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = timeout1 &rArr; rt_timer_stop &rArr; rt_assert_handler &rArr; rt_kprintf &rArr; rt_vsnprintf &rArr; print_number
+<P><STRONG><a name="[76]"></a>timer1out</STRONG> (Thumb, 48 bytes, Stack size 8 bytes, timer_sample.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 224<LI>Call Chain = timer1out &rArr; rt_timer_stop &rArr; rt_assert_handler &rArr; rt_kprintf &rArr; rt_vsnprintf &rArr; print_number
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_kprintf
 <LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_timer_stop
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> timer_sample.o(.text)
 </UL>
-<P><STRONG><a name="[77]"></a>timeout2</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, timer_sample.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = timeout2 &rArr; rt_kprintf &rArr; rt_vsnprintf &rArr; print_number
+<P><STRONG><a name="[77]"></a>timer2out</STRONG> (Thumb, 12 bytes, Stack size 8 bytes, timer_sample.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 184<LI>Call Chain = timer2out &rArr; rt_kprintf &rArr; rt_vsnprintf &rArr; print_number
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_kprintf
 </UL>
