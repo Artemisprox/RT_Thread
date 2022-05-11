@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\build\rtthread-stm32.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\build\rtthread-stm32.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Sun May 08 18:20:09 2022
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 5060750: Last Updated: Wed May 11 19:47:25 2022
 <BR><P>
 <H3>Maximum Stack Usage =        496 bytes + Unknown(Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -201,7 +201,7 @@ Function Pointers
  <LI><a href="#[76]">timer1out</a> from timer_sample.o(.text) referenced from timer_sample.o(.text)
  <LI><a href="#[77]">timer2out</a> from timer_sample.o(.text) referenced from timer_sample.o(.text)
  <LI><a href="#[b5]">timer_sample</a> from timer_sample.o(.text) referenced from timer_sample.o(FSymTab)
- <LI><a href="#[b6]">timeslice_sample</a> from timeslice_sample.o(.text) referenced from timeslice_sample.o(FSymTab)
+ <LI><a href="#[b6]">timeslice</a> from timeslice_sample.o(.text) referenced from timeslice_sample.o(FSymTab)
  <LI><a href="#[97]">version</a> from cmd.o(.text) referenced 2 times from cmd.o(FSymTab)
 </UL>
 <P>
@@ -3198,7 +3198,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[164]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_thread_control
 <LI><a href="#[128]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_thread_idle_init
 <LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_application_init
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timeslice_sample
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timeslice
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;thread_sample
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;signal_sample
 <LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;semaphore_sample
@@ -3237,7 +3237,7 @@ Global Symbols
 <LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_malloc
 </UL>
 <BR>[Called By]<UL><LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_application_init
-<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timeslice_sample
+<LI><a href="#[b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;timeslice
 <LI><a href="#[b4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;thread_sample
 <LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;signal_sample
 <LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;scheduler_hook
@@ -4068,8 +4068,8 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> timer_sample.o(FSymTab)
 </UL>
-<P><STRONG><a name="[b6]"></a>timeslice_sample</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, timeslice_sample.o(.text))
-<BR><BR>[Stack]<UL><LI>Max Depth = 480<LI>Call Chain = timeslice_sample &rArr; rt_thread_create &rArr; rt_object_allocate &rArr; rt_malloc &rArr; rt_sem_take &rArr; rt_schedule &rArr; rt_thread_handle_sig &rArr; rt_mp_free &rArr;  rt_schedule (Cycle)
+<P><STRONG><a name="[b6]"></a>timeslice</STRONG> (Thumb, 68 bytes, Stack size 16 bytes, timeslice_sample.o(.text))
+<BR><BR>[Stack]<UL><LI>Max Depth = 480<LI>Call Chain = timeslice &rArr; rt_thread_create &rArr; rt_object_allocate &rArr; rt_malloc &rArr; rt_sem_take &rArr; rt_schedule &rArr; rt_thread_handle_sig &rArr; rt_mp_free &rArr;  rt_schedule (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[121]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_thread_startup
 <LI><a href="#[120]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_thread_create
@@ -5250,7 +5250,7 @@ Local Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> timer_sample.o(.text)
 </UL>
-<P><STRONG><a name="[78]"></a>thread_entry</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, timeslice_sample.o(.text))
+<P><STRONG><a name="[78]"></a>thread_entry</STRONG> (Thumb, 46 bytes, Stack size 16 bytes, timeslice_sample.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 192<LI>Call Chain = thread_entry &rArr; rt_kprintf &rArr; rt_vsnprintf &rArr; print_number
 </UL>
 <BR>[Calls]<UL><LI><a href="#[b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;rt_kprintf
