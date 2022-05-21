@@ -932,6 +932,16 @@
               <FileType>1</FileType>
               <FilePath>.\kernel-sample-0.1.0\timeslice_sample.c</FilePath>
             </File>
+            <File>
+              <FileName>flow_LED.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\kernel-sample-0.1.0\flow_LED.c</FilePath>
+            </File>
+            <File>
+              <FileName>flow_LED_pro.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\kernel-sample-0.1.0\flow_LED_pro.c</FilePath>
+            </File>
           </Files>
         </Group>
       </Groups>

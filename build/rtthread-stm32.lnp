@@ -102,6 +102,8 @@
 ".\build\thread_sample.o"
 ".\build\timer_sample.o"
 ".\build\timeslice_sample.o"
+".\build\flow_led.o"
+".\build\flow_led_pro.o"
 --library_type=microlib --strict --scatter ".\build\rtthread-stm32.sct"
 --keep *.o(.rti_fn.*) --keep *.o(FSymTab) --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
